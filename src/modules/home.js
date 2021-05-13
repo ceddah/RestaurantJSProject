@@ -1,11 +1,13 @@
-import spawn from "cross-spawn";
+import content from '../index.js';
+
 
 export default function homeRender() {
     //See if we can append this to index.html from here to #content
     //Or just export content div
     console.log('rendering home page...')
     headerRender();
-    // navigationLinks();
+    footerRender();
+    console.log(content);
 }
 
 const headerRender = () => {
@@ -22,16 +24,7 @@ const headerRender = () => {
     logoDiv.appendChild(logoTitle);
     nav.appendChild(logoDiv);
 
-    const ulList = document.createElement('ul');
-    const navContent = ['Home', 'Menu', 'About Us', 'Contact'];
-    for(let i = 0; i < navContent.length; i++) {
-        const li = document.createElement('li');
-        const aLink = document.createElement('a');
-        aLink.innerHTML = `${navContent[i]}`;
-        li.appendChild(aLink);
-        ulList.appendChild(li);
-    }
-    nav.appendChild(ulList);
+    nav.appendChild(navigationLinks());
     header.appendChild(nav);
     console.log(header);
     return header;
@@ -64,6 +57,15 @@ const footerRender = () => {
 
     const footerNav = document.createElement('div');
     footerNav.classList.add('footer-nav');
+    footerNav.appendChild(navigationLinks());
+    footer.appendChild(footerNav);
+    console.log(footer)
+    return footer;
+}
+
+const mainSection = () => {
+    const main = document.createElement('main');
+    main.setAttribute('id', 'main');
 }
 
 const navigationLinks = () => {
@@ -76,7 +78,6 @@ const navigationLinks = () => {
         li.appendChild(aLink);
         ulList.appendChild(li);
     }
-    
-    console.log(ulList);
+
     return ulList;
 }
