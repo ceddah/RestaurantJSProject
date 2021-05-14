@@ -1,6 +1,3 @@
-import content from '../index.js';
-
-
 export default function homeRender() {
     //See if we can append this to index.html from here to #content
     //Or just export content div

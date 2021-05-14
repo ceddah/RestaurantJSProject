@@ -9,5 +9,3 @@ const RenderPage = () => {
 }
 
 window.addEventListener('load', RenderPage);
-
-export { content as default}
