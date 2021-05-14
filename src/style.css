@@ -349,6 +349,7 @@ body {
 /* About Us Tab */
 #about-us {
     padding-bottom: 100px;
+    display: none;
 }
 
 #about-us .about-us-title{
@@ -429,6 +430,113 @@ body {
     background-color: transparent;
 }
 
+/* Contact Us Tab */
+#contact {
+    display: none;
+}
+
+#contact .contact-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+#contact .contact-title h1 {
+    margin: 0 1.5rem;
+    color: #c59d5f;
+    letter-spacing: 1px;
+    position: relative;
+    width: 170px;
+}
+
+#contact .contact-title h1::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+    width: 50%;
+    height: 2px;
+    background-color: #c59d5f;
+}
+
+#contact form {
+    height: 60vh;
+    width: 350px;
+    margin: 2rem auto 0; 
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#contact form h3 {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+#contact .form-control {
+    margin-bottom: 0.5rem;
+}
+
+#contact .form-control input {
+    display: block;
+    width: 100%;
+    height: 25px;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#contact .form-control label {
+    letter-spacing: 1px;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+#contact .form-control textarea {
+    width: 100%;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#contact form button {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    background-color: #c59d5f;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#contact form button:active {
+    transform: scale(0.98);
+}
+
+#main #home.active {
+    display: flex;
+}
+
+#menu.active {
+    display: block;
+}
+
+#about-us.active {
+    display: block;
+}
+
+#contact.active {
+    display: block;
+}
 
 @media screen and (min-width: 768px) {
     .menu-item {
