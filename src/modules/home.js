@@ -1,11 +1,7 @@
-import homeTab from './homeTab.js'
-import menuTab from './menuTab';
-
 import content from '../index.js';
 
-export default function homeRender() {
+export default function homePageRender() {
     console.log('home.js')
-    menuTab();
     //On-load Page
     content.appendChild(headerRender());
     content.appendChild(mainSection());
@@ -68,7 +64,6 @@ const footerRender = () => {
 const mainSection = () => {
     const main = document.createElement('main');
     main.setAttribute('id', 'main');
-    main.appendChild(homeTab());
 
     return main;
 }
