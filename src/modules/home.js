@@ -1,10 +1,7 @@
 export default function homeRender() {
-    //See if we can append this to index.html from here to #content
-    //Or just export content div
     console.log('rendering home page...')
     headerRender();
     footerRender();
-    console.log(content);
 }
 
 const headerRender = () => {
