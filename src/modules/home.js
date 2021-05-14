@@ -2,7 +2,6 @@ export default function homeRender() {
     console.log('rendering home page...')
     headerRender();
     footerRender();
-    homeTabContet();
 }
 
 const headerRender = () => {
