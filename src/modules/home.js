@@ -66,6 +66,7 @@ const footerRender = () => {
 const mainSection = () => {
     const main = document.createElement('main');
     main.setAttribute('id', 'main');
+    //append all tabs here...
 }
 
 const navigationLinks = () => {
