@@ -1,6 +1,3 @@
-import homeTabContet from './homeTab.js';
-
-
 export default function homeRender() {
     console.log('rendering home page...')
     headerRender();
