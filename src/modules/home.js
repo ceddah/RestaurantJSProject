@@ -1,13 +1,15 @@
+import homeTab from './homeTab.js'
+import menuTab from './menuTab';
+
 import content from '../index.js';
 
-
 export default function homeRender() {
-    //See if we can append this to index.html from here to #content
-    //Or just export content div
-    console.log('rendering home page...')
-    headerRender();
-    footerRender();
-    console.log(content);
+    console.log('home.js')
+    menuTab();
+    //On-load Page
+    content.appendChild(headerRender());
+    content.appendChild(mainSection());
+    content.appendChild(footerRender());
 }
 
 const headerRender = () => {
@@ -26,7 +28,7 @@ const headerRender = () => {
 
     nav.appendChild(navigationLinks());
     header.appendChild(nav);
-    console.log(header);
+
     return header;
 }
 
@@ -59,13 +61,16 @@ const footerRender = () => {
     footerNav.classList.add('footer-nav');
     footerNav.appendChild(navigationLinks());
     footer.appendChild(footerNav);
-    console.log(footer)
+
     return footer;
 }
 
 const mainSection = () => {
     const main = document.createElement('main');
     main.setAttribute('id', 'main');
+    main.appendChild(homeTab());
+
+    return main;
 }
 
 const navigationLinks = () => {
