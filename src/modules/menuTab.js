@@ -34,8 +34,6 @@ const menuArr = [
 ];
 
 export default function menuTab() {
-    console.log('menu tab....1235')
-
     const menu = document.createElement('div');
     menu.setAttribute('id', 'menu');
 

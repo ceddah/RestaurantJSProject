@@ -10,6 +10,7 @@
 
 html {
     font-family: 'Lato', sans-serif;
+    overflow-y: overlay;
 }
 
 body {
@@ -548,12 +549,61 @@ body {
       height: 175px;
     }
   }
-  @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     #menu-content  {
-      width: 95vw;
-      grid-template-columns: 1fr 1fr;
+        width: 95vw;
+        grid-template-columns: 1fr 1fr;
     }
     .photo {
-      height: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* body {
+        width: 100vw;
+    } */
+    #header {
+        width: 100%;
+    }
+    #header nav {
+        justify-content: space-around;
+    }
+    #header nav .logo h2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    #header nav ul li {
+        margin: 0 0.5rem;
+    }
+    
+    #header nav ul li a {
+        font-size: 16px;
+    }
+    #footer {
+        width: 100%;
+        padding: 0 1rem;
+        justify-content: center;
+        grid-template-columns: repeat(1, 1fr);
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    #footer .madeBy {
+        display: none;
+    }
+    #footer .footer-nav {
+        display: none;
+    }
+    #footer .social {
+        justify-content: center;
+    }
+    #main #home .title {
+        font-size: 30px;
+        text-align: center;
+    }
+    #main #home p {
+        width: 500px;
+        color: #e9e5e5;
+        line-height: 25px;
     }
 }

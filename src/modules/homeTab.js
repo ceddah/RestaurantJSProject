@@ -1,6 +1,7 @@
 export default function homeTab() {
     const home = document.createElement('div');
     home.setAttribute('id', 'home');
+    home.classList.add('active');
 
     const homeTitle = document.createElement('h1');
     homeTitle.classList.add('title');

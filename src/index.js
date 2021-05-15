@@ -18,7 +18,22 @@ const RenderPage = () => {
     main.appendChild(menuTab());
     main.appendChild(aboutUsTab());
     main.appendChild(contactTab());
-    console.log('123')
+    
+    const tabButtons = document.querySelectorAll('.tabButton');
+    tabButtons.forEach(button => button.addEventListener('click', (e) => {
+        switchTabs(e);
+    }));
+}
+
+const switchTabs = (event) => {
+    const id = event.target.dataset.id;
+    
+    const main = document.getElementById('main');
+    const tabs = main.childNodes;
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    const element = document.getElementById(id);
+    element.classList.add('active');
 }
 
 export { content as default};

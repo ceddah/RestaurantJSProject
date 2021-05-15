@@ -1,7 +1,6 @@
 import content from '../index.js';
 
 export default function homePageRender() {
-    console.log('home.js')
     //On-load Page
     content.appendChild(headerRender());
     content.appendChild(mainSection());
@@ -74,6 +73,8 @@ const navigationLinks = () => {
     for(let i = 0; i < navContent.length; i++) {
         const li = document.createElement('li');
         const aLink = document.createElement('a');
+        aLink.setAttribute('data-id', navContent[i].toLowerCase().replace(' ', '-'));
+        aLink.classList.add('tabButton');
         aLink.innerHTML = `${navContent[i]}`;
         li.appendChild(aLink);
         ulList.appendChild(li);
