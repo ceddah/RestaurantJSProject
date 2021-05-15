@@ -1,7 +1,10 @@
-export default function homeRender() {
-    console.log('rendering home page...')
-    headerRender();
-    footerRender();
+import content from '../index.js';
+
+export default function homePageRender() {
+    //On-load Page
+    content.appendChild(headerRender());
+    content.appendChild(mainSection());
+    content.appendChild(footerRender());
 }
 
 const headerRender = () => {
@@ -20,7 +23,7 @@ const headerRender = () => {
 
     nav.appendChild(navigationLinks());
     header.appendChild(nav);
-    console.log(header);
+
     return header;
 }
 
@@ -53,14 +56,14 @@ const footerRender = () => {
     footerNav.classList.add('footer-nav');
     footerNav.appendChild(navigationLinks());
     footer.appendChild(footerNav);
-    console.log(footer)
+
     return footer;
 }
 
 const mainSection = () => {
     const main = document.createElement('main');
     main.setAttribute('id', 'main');
-    //append all tabs here...
+    return main;
 }
 
 const navigationLinks = () => {
@@ -69,6 +72,8 @@ const navigationLinks = () => {
     for(let i = 0; i < navContent.length; i++) {
         const li = document.createElement('li');
         const aLink = document.createElement('a');
+        aLink.setAttribute('data-id', navContent[i].toLowerCase().replace(' ', '-'));
+        aLink.classList.add('tabButton');
         aLink.innerHTML = `${navContent[i]}`;
         li.appendChild(aLink);
         ulList.appendChild(li);
