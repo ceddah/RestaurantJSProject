@@ -6,3 +6,5 @@ Languages and Tools used:
 - Javascript
 - Git
 - Github
+- npm
+- webpack

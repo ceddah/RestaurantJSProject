@@ -602,8 +602,24 @@ body {
         text-align: center;
     }
     #main #home p {
-        width: 500px;
-        color: #e9e5e5;
+        width: 350px;
+        margin-bottom: 1rem;
+    }
+    #menu {
+        padding-bottom: 80px;
+    }
+    #about-us .section-light p{
         line-height: 25px;
+        text-align: left;
+    }
+    #about-us .section-dark p{
+        line-height: 25px;
+        text-align: left;
+    }
+    #contact {
+        padding-bottom: 150px;
+    }
+    #contact form {
+        height: 70vh;
     }
 }
